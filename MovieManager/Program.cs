@@ -1,7 +1,12 @@
 ﻿using MovieManager;
+using MovieManager.App.Concrete;
+using MovieManager.Domain.Entity;
 //data
 int choice = 0;
 List<Folder> Folders = new List<Folder>();
+//
+FolderService folderService = new FolderService();
+//
 MenuMethods MenuMethodsInvoker = new MenuMethods();
 
 //Main Menu
@@ -18,16 +23,20 @@ while (true)
     switch (choice)
     {
         case 1:
+            //MenuMethodsInvoker.AddFolder(ref Folders);
             MenuMethodsInvoker.AddFolder(ref Folders);
             break;
         case 2:
             MenuMethodsInvoker.AddMovieToFolder(ref Folders);
+
             break;
         case 3:
             MenuMethodsInvoker.ShowFolderNames(Folders);
+            //MenuMethodsInvoker.ShowFolderNames(folderService.Elements);
             break;
         case 4:
             MenuMethodsInvoker.ShowMovies(Folders);
+            //MenuMethodsInvoker.ShowMovies(folderService.Elements);
             break;
         case 5:
             System.Environment.Exit(0);

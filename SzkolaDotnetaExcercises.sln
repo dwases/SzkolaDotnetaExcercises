@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SzkolaDotnetaExcercises", "SzkolaDotnetaExcercises\SzkolaDotnetaExcercises.csproj", "{0754EB00-6D2A-405D-830C-C1C18E6C9FD1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tydzien2Warunki", "Tydzien2Warunki\Tydzien2Warunki.csproj", "{0827A16D-D7E9-4512-A6D2-966E52918E00}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tydzien2Petle", "Tydzien2Petle\Tydzien2Petle.csproj", "{AAB9DD89-15F6-45EF-A2AE-4856D1A9A1E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieManager", "MovieManager\MovieManager.csproj", "{6640BFF5-023B-4D41-A416-F182901454A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tydzien2TypyDanych", "Tydzien2TypyDanych\Tydzien2TypyDanych.csproj", "{9188662A-B53C-49D0-B9D1-0E9E494D305B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tydzien2TypyDanych", "Tydzien2TypyDanych\Tydzien2TypyDanych.csproj", "{9188662A-B53C-49D0-B9D1-0E9E494D305B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MovieManagerFolder", "MovieManagerFolder", "{59578C25-BD2A-4320-86E3-FF28D90D0F10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tydzien2Zadania", "Tydzien2Zadania", "{8CA548A6-025D-41BB-A4F8-A8C7B82CDBC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.App", "MovieManager.App\MovieManager.App.csproj", "{6FBCB25D-E559-4795-AD86-41491060259E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Domain", "MovieManager.Domain\MovieManager.Domain.csproj", "{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0754EB00-6D2A-405D-830C-C1C18E6C9FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0754EB00-6D2A-405D-830C-C1C18E6C9FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0754EB00-6D2A-405D-830C-C1C18E6C9FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0754EB00-6D2A-405D-830C-C1C18E6C9FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0827A16D-D7E9-4512-A6D2-966E52918E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0827A16D-D7E9-4512-A6D2-966E52918E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0827A16D-D7E9-4512-A6D2-966E52918E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,9 +41,25 @@ Global
 		{9188662A-B53C-49D0-B9D1-0E9E494D305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9188662A-B53C-49D0-B9D1-0E9E494D305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9188662A-B53C-49D0-B9D1-0E9E494D305B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FBCB25D-E559-4795-AD86-41491060259E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FBCB25D-E559-4795-AD86-41491060259E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FBCB25D-E559-4795-AD86-41491060259E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FBCB25D-E559-4795-AD86-41491060259E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0827A16D-D7E9-4512-A6D2-966E52918E00} = {8CA548A6-025D-41BB-A4F8-A8C7B82CDBC0}
+		{AAB9DD89-15F6-45EF-A2AE-4856D1A9A1E8} = {8CA548A6-025D-41BB-A4F8-A8C7B82CDBC0}
+		{6640BFF5-023B-4D41-A416-F182901454A6} = {59578C25-BD2A-4320-86E3-FF28D90D0F10}
+		{9188662A-B53C-49D0-B9D1-0E9E494D305B} = {8CA548A6-025D-41BB-A4F8-A8C7B82CDBC0}
+		{6FBCB25D-E559-4795-AD86-41491060259E} = {59578C25-BD2A-4320-86E3-FF28D90D0F10}
+		{1A1380C3-6AC5-4E2D-B57C-842CBFCCDA6E} = {59578C25-BD2A-4320-86E3-FF28D90D0F10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1D8E527-1054-4584-A775-1109994DF0E6}

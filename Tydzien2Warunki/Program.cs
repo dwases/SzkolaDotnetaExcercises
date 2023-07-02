@@ -1,27 +1,61 @@
 ﻿using System.Linq.Expressions;
 
-Console.WriteLine("Hello, World!");
-
 //zadanie1
 int a  = 5;
 int b = 5;
 
-Console.WriteLine(a == b ? a + " i " + b + " są równe" : a + " i " + b + " są różne");
+//Console.WriteLine(a == b ? a + " i " + b + " są równe" : a + " i " + b + " są różne");
+if (a == b)
+{
+    Console.WriteLine($"{a} i {b} są równe");
+}
+else
+{
+    Console.WriteLine($"{a} i {b} są różne");
+}
 
 //zadanie2
 Console.WriteLine("Podaj liczbę żeby sprawdzić czy jest parzysta: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(number1 % 2 == 0 ? number1 + " jest liczbą parzystą" : number1 + " jest liczbą nieparzystą");
+Console.WriteLine(number1 % 2 == 0 ? $"{number1} jest liczbą parzystą" : $"{number1} jest liczbą nieparzystą");
 
 //zadanie3
 Console.WriteLine("Podaj liczbę żeby sprawdzić czy jest dodatnia czy ujemna: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(number2 >= 0 ? number2 + " jest liczbą dodatnią" : number2 + " jest liczbą ujemną");
+if(number2 == 0)
+{
+    Console.WriteLine($"{number2} nie jest liczbą ani dodatnią ani ujemną");
+}
+else
+{
+    Console.WriteLine(number2 > 0 ? $"{number2} jest liczbą dodatnią" : $"{number2} jest liczbą ujemną");
+}
 
 //zadanie4
 Console.WriteLine("Podaj rok żeby sprawdzić czy jest przestępny: ");
 int year = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(year % 4 == 0 ? year + " jest rokiem przestępnym" : year + " nie jest rokiem przestępnym");
+if(year % 4 == 0)
+{
+    if (year % 100 == 0)
+    {
+        if (year % 400 == 0)
+        {
+            Console.WriteLine($"{year} jest rokiem przestępnym");
+        }
+        else
+        {
+            Console.WriteLine($"{year} nie jest rokiem przestępnym");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"{year} jest rokiem przestępnym");
+    }     
+}
+else
+{
+    Console.WriteLine($"{year} nie jest rokiem przestępnym");
+}
 
 //zadanie5
 Console.WriteLine("Podaj swój wiek żeby sprawdzić czy możesz zostać posłem, senatorem, premierem, lub prezydentem: ");
@@ -79,31 +113,53 @@ matury.Add(Convert.ToInt32(Console.ReadLine()));
 
 bool isAllowed = false;
 if (matury[0] > 70 && matury[1] > 55  && matury[2] > 45 && matury.Sum() > 180)
+{
     isAllowed = true;
+}
 else if (matury[0] + matury[1] > 150 || matury[0] + matury[2] > 150)
+{
     isAllowed = true;
+}
+    
 
 if (isAllowed)
+{
     Console.WriteLine("Kandydat dopuszczony do rekrutacji");
+}
 else
+{
     Console.WriteLine("Kandydat nie został dopuszczony do rekrutacji");
+}
+    
 
 //zadanie9
 Console.WriteLine("Podaj temperaturę: ");
 int temp = Convert.ToInt32(Console.ReadLine());
 
 if (temp < 0)
+{
     Console.WriteLine("Cholernie piździ");
+}
 else if (temp >= 0 && temp < 10)
+{
     Console.WriteLine("zimno");
+}
 else if (temp >= 10 && temp < 20)
+{
     Console.WriteLine("chlodno");
+}
 else if (temp >= 20 && temp < 30)
+{
     Console.WriteLine("w sam raz");
+}
 else if (temp >= 30 && temp < 40)
+{
     Console.WriteLine("zaczyna być słabo, bo gorąco");
+}
 else if (temp >= 40)
+{
     Console.WriteLine("a weź wyprowadzam się na Alaskę.");
+}
 
 //zadanie10
 Console.WriteLine("Podaj trzy długości boków: ");
@@ -171,7 +227,6 @@ switch (daynum)
         break;
 }
 
-
 //zadanie13
 Console.WriteLine("Podaj pierwszą liczbę: ");
 double m = Convert.ToDouble(Console.ReadLine());
@@ -187,7 +242,14 @@ Console.WriteLine("Twój wynik to: ");
 switch (choice)
 {
     case 4:
-        Console.WriteLine(m/n);
+        if (n != 0)
+        {
+            Console.WriteLine(m / n);
+        }
+        else
+        {
+            Console.WriteLine("Nie można dzielić przez 0");
+        }
         break;
     case 3:
         Console.WriteLine(m*n);

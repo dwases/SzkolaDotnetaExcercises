@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MovieManager.Domain.Common;
 
-namespace MovieManager
+namespace MovieManager.Domain.Entity
 {
-    public class Folder
+    public class Folder : BaseEntity
     {
         public string Name { get; set; }
         //public List <Movie> movies = new List <Movie> ();

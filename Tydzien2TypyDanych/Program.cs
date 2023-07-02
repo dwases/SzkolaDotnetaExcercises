@@ -1,10 +1,10 @@
 ﻿//zadanie1
-string nazwisko;
-int imie;
-int wiek;
-char plec;  //'m' lub 'k'
+string surname;
+int name;
+int age;
+char sex;  //'m' lub 'k'
 string pesel;
-int numerPracownika;
+int workerID;
 
 //zadanie2
 char a = 'a';
@@ -30,9 +30,9 @@ z3 = "Szkoła dotneta";
 
 //zadanie5
 Console.WriteLine("Podaj swoje imię:");
-string name = Console.ReadLine();
+string name5 = Console.ReadLine();
 Console.WriteLine("Podaj swoje nazwisko");
-string surname = Console.ReadLine();
+string surname5 = Console.ReadLine();
 Console.WriteLine("Podaj swój numer telefonu:");
 int tel = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Podaj swój adres email:");
@@ -42,6 +42,6 @@ double height = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Podaj swoją wagę: ");
 double weight = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Podaj swoją płeć(m lub k): ");
-char sex = Convert.ToChar(Console.ReadLine());
+char sex5 = Convert.ToChar(Console.ReadLine());
 Console.WriteLine("Podaj swoją ojczyznę: ");
 string homeland  = Console.ReadLine();

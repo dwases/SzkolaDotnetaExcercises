@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieManager
+namespace MovieManager.Domain.Common
 {
-    public class Movie
+    public class BaseEntity : AuditableModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Synopsis { get; set; }
     }
 }
