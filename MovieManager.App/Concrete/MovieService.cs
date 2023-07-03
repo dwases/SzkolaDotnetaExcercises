@@ -7,6 +7,7 @@ using MovieManager.Domain.Entity;
 
 namespace MovieManager.App.Concrete
 {
+    //so far unused
     public class MovieService : Movie
     {
 

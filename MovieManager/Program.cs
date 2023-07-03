@@ -24,19 +24,19 @@ while (true)
     {
         case 1:
             //MenuMethodsInvoker.AddFolder(ref Folders);
-            MenuMethodsInvoker.AddFolder(ref Folders);
+            MenuMethodsInvoker.AddFolder(ref folderService);
             break;
         case 2:
-            MenuMethodsInvoker.AddMovieToFolder(ref Folders);
-
+            //MenuMethodsInvoker.AddMovieToFolder(ref Folders);
+            MenuMethodsInvoker.AddMovieToFolder(ref folderService);
             break;
         case 3:
-            MenuMethodsInvoker.ShowFolderNames(Folders);
-            //MenuMethodsInvoker.ShowFolderNames(folderService.Elements);
+            //MenuMethodsInvoker.ShowFolderNames(Folders);
+            MenuMethodsInvoker.ShowFolderNames(folderService);
             break;
         case 4:
-            MenuMethodsInvoker.ShowMovies(Folders);
-            //MenuMethodsInvoker.ShowMovies(folderService.Elements);
+            //MenuMethodsInvoker.ShowMovies(Folders);
+            MenuMethodsInvoker.ShowMovies(folderService);
             break;
         case 5:
             System.Environment.Exit(0);

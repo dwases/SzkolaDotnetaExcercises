@@ -9,7 +9,8 @@ namespace MovieManager.Domain.Entity
 {
     public class Movie : BaseEntity
     {
-        public string Name { get; set; }
+        //public string Name { get; set; }
+        //^implemented by parent class
         public string Synopsis { get; set; }
     }
 }
