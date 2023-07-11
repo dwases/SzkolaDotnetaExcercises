@@ -1,6 +1,6 @@
 ﻿//zadanie1
-int ilość_pierwszych = 0;
-bool niepierwsza = false;
+int numOfPrime = 0;
+bool notPrime = false;
 
 for  (int i = 0; i <= 100; i++)
 {
@@ -16,18 +16,17 @@ for  (int i = 0; i <= 100; i++)
     {
         if (i % j == 0)
         {
-            niepierwsza = true;
+            notPrime = true;
             break;
         }
     }
-    if (!niepierwsza)
+    if (!notPrime)
     {
-        ilość_pierwszych++;
-        niepierwsza = !niepierwsza;
+        numOfPrime++;
     }
-    niepierwsza = false;
+    notPrime = false;
 }
-Console.WriteLine("Ilość liczb pierwszych w przedziale od 0 do 100, to: "+ilość_pierwszych);
+Console.WriteLine("Ilość liczb pierwszych w przedziale od 0 do 100, to: "+numOfPrime);
 
 //zadanie2
 int n = 0;
@@ -61,17 +60,17 @@ for  (int i = 0; i <= 10; i++)
 //zadanie4
 Console.WriteLine("\nPodaj liczbę do zbudowania piramidy: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int e_now = 0;
-int e_max = 1;
+int eNow = 0;
+int eMax = 1;
 for(int i = 1; i <= num; i++)
 {
-    e_now++;
+    eNow++;
     Console.Write(i+" ");
-    if(e_now == e_max)
+    if(eNow == eMax)
     {
         Console.Write("\n");
-        e_max++;
-        e_now = 0;
+        eMax++;
+        eNow = 0;
     }
 }
 
@@ -84,22 +83,59 @@ for (int i = 1; i<=20; i++)
 }
 
 //zadanie6
-double suma = 0.0;
+double sum = 0.0;
 for(int i = 1; i<=20;i++)
 {
-    suma += Convert.ToDouble(1) / Convert.ToDouble(i);
+    sum += Convert.ToDouble(1) / Convert.ToDouble(i);
 }
-Console.WriteLine("\nSuma odwrotności: " + suma);
+Console.WriteLine("\nSuma odwrotności: " + sum);
 
 //zadanie7
 Console.WriteLine("Podaj długość krótszej przekątnej diamentu: ");
-int short_diag = Convert.ToInt32(Console.ReadLine());
-if (short_diag % 2 == 0)
-    System.Console.WriteLine("Diament wymaga nieparzystego wymiaru przekątnej.");
+int shortDiag = Convert.ToInt32(Console.ReadLine());
+int spaces = 0;
+if (shortDiag % 2 == 0)
+{
+    int starsNum = 2;
+    spaces = shortDiag / 2 - 1;
+    for(int i = 0; i < shortDiag/2; i++)
+    {
+        Console.Write("\n");
+        for(int j = 0; j < spaces; j++)
+        {
+            Console.Write(' ');
+        }
+        spaces--;
+        for(int j = 0; j < starsNum; j++)
+        {
+            Console.Write("*");
+        }
+        starsNum += 2;
+    }
+
+    starsNum -= 4;
+    spaces = 1;
+    for(int i = 0; i < shortDiag / 2 - 1; i++)
+    {
+        Console.Write("\n");
+        for (int j = 0; j < spaces; j++)
+        {
+            Console.Write(' ');
+        }
+        spaces++;
+        
+        for(int j = 0; j < starsNum; j++)
+        {
+            Console.Write('*');
+        }
+        starsNum -= 2;
+        
+    }
+}
 else
 {
-    int spaces = short_diag / 2;
-    for(int i  = 0; i <= short_diag; i+=2)
+    spaces = shortDiag / 2;
+    for(int i  = 0; i <= shortDiag; i+=2)
     {
         Console.Write("\n");
         for(int j = 0; j <= spaces; j++)
@@ -114,7 +150,7 @@ else
     }
 
     spaces = 1;
-    for (int i = short_diag-2; i >= 0; i -= 2)
+    for (int i = shortDiag-2; i >= 0; i -= 2)
     {
         Console.Write("\n");
         for (int j = 0; j <= spaces; j++)
